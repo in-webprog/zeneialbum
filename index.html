@@ -1,18 +1,29 @@
+<!-- /*
+* File: app.js
+* Author: Dóra Boglárka
+* Copyright: 2026, Dóra Boglárka
+* Group: I N
+* Date: 2026-05-06
+* Github: https://github.com/kalae1337/
+* Licenc: MIT
+*/ -->
+
 <!DOCTYPE html>
 <html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zenei albumok</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
 
   <div class="container">
-    <button id="aboutbtn">Névjegy</button>
+    <button id="aboutbtn" class="btn btn-secondary mt-5">Névjegy</button>
         <h1>Ingatlan</h1>
 
 
-        <table>
+        <table class="table table-striped ">
           <tr>
             <th>Előadó</th>
             <th>Album címe</th>
@@ -22,9 +33,12 @@
           </tr>
           <tbody id="tbody"></tbody>
         </table>
+
+        <div class="osszhossz"></div>
   </div>
     
     <script type="module" src="src/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
 </html>

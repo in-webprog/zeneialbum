@@ -1,3 +1,12 @@
+/*
+* File: app.js
+* Author: Dóra Boglárka
+* Copyright: 2026, Dóra Boglárka
+* Group: I N
+* Date: 2026-05-06
+* Github: https://github.com/kalae1337/
+* Licenc: MIT
+*/
 
 const albumok = [
   { eloado: 'Pink Floyd', cim: 'The Dark Side of the Moon', ev: 1973, mufaj: 'Progressive Rock', hossz: 43 },
@@ -13,16 +22,20 @@ const albumok = [
 
 const doc = {
     tbody: document.querySelector('#tbody'),
-    aboutbtn : document.querySelector("#aboutbtn")
+    aboutbtn : document.querySelector("#aboutbtn"),
+    osszhossz : document.querySelector("#osszhossz")
 };
 
 var rows = '';
 
 albumok.forEach(album => {
+
+    const dupla = album.hossz > 50 ? ' (Dupla album)' : '';
+
     var row = `
     <tr>
         <td>${album.eloado}</td>
-        <td>${album.cim}</td>
+        <td>${album.cim}${dupla}</td>
         <td>${album.ev}</td>
         <td>${album.mufaj}</td>
         <td>${album.hossz}</td>
@@ -30,13 +43,16 @@ albumok.forEach(album => {
     </tr>
     `
     rows += row;
+
 });
 
 doc.tbody.innerHTML = rows;
 
+
+
 doc.aboutbtn.addEventListener('click', () => {
     Swal.fire({
-        title: 'Ingatlan',
-        text: 'Kala, IN, 2026-04-23'
+        title: 'Zenei albumok',
+        text: 'Kala, IN, 2026-05-06'
     })
 })
